@@ -1,3 +1,4 @@
+/* sets up the necessary values and suits to be dispalyed for the game to run */
 const suits = ['Hearts', 'Diamonds', 'Clubs', 'Spades'];
 const values = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A'];
 let deck = [];
@@ -51,6 +52,7 @@ function getHandValue(hand) {
 function startGame() {
     createDeck();
     player1Hand = [];
+    player2Hand = [];
     dealerHand = [];
     dealCard(player1Hand);
     dealCard(player2Hand);
@@ -74,6 +76,7 @@ function hit() {
         updateDisplay();
         if (getHandValue(player2Hand) > 21) {
             document.getElementById('message').innerText = 'You Busted! Dealer Wins!';
+            dealerTurn();
         }
     }
 }
@@ -99,6 +102,7 @@ function determineWinner() {
     let player1Value = getHandValue(player1Hand);
     let player2Value = getHandValue(player2Hand);
     let dealerValue = getHandValue(dealerHand);
+    currentPlayer = 1;
     let message = '';
 
     if (dealerValue > 21) {
@@ -127,9 +131,11 @@ function determineWinner() {
 }
 
 function updateDisplay() {
-    document.getElementById('player-hand').innerText = JSON.stringify(player1Hand);
+    document.getElementById('player1-hand').innerText = JSON.stringify(player1Hand);
+    document.getElementById('player2-hand').innerText = JSON.stringify(player2Hand);
     document.getElementById('dealer-hand').innerText = JSON.stringify(dealerHand);
-    document.getElementById('player-score').innerText = getHandValue(player1Hand);
+    document.getElementById('player1-score').innerText = getHandValue(player1Hand);
+    document.getElementById('player2-score').innerText = getHandValue(player2Hand);
     document.getElementById('dealer-score').innerText = getHandValue(dealerHand);
 }
 
