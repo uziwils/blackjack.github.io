@@ -1,0 +1,14 @@
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+.hand {
+    margin: 10px;
+}
+
+.card{
+    width: 100px;
+    height: auto;
+    margin: 5px;
+}

@@ -1,5 +1,6 @@
 /* sets up the necessary values and suits to be displayed for the game to run
-* TODO: develop on the game logic to hide the dealer's second card */
+* TODO: develop on the game logic to hide the dealer's second card
+*  TODO: possible adding of chips? */
 const suits = ['Hearts', 'Diamonds', 'Clubs', 'Spades'];
 const values = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'j', 'q', 'k', 'a'];
 let deck = [];
