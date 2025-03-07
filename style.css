@@ -1,14 +1,59 @@
-
+/* displays the standard body text for the game */
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-}
-.hand {
-    margin: 10px;
+    background: slategray;
+    color: white;
 }
 
-.card{
+h1 {
+    margin-bottom: 20px;
+}
+
+/* container for the game layout displays in a flex box */
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* displays dealer's section above player cards */
+.dealer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* displays players' cards below the dealer's cards and lines them up */
+.players-section {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    width: 100%;
+}
+
+/* aligns hands horizontally */
+.hand {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* styling for card images to display an outline then have a white background as it is a png
+    file, making the cards transparent and display the background color */
+.card {
     width: 100px;
     height: auto;
     margin: 5px;
+    border: 2px solid black;
+    border-radius: 5px;
+    background: white;
+}
+
+/* individual player section styling */
+.player-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

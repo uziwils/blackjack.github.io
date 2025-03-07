@@ -7,23 +7,44 @@
 </head>
 
 <body>
-    <h1>Blackjack</h1>
-    <button id="start">Start Game</button>
-    <button id="hit">Hit</button>
-    <button id="stand">Stand</button>
+<h1>Blackjack</h1>
 
-    <h2>Dealer's Hand</h2>
+<!-- sets the proper buttons to start the game, hit, and stand. -->
+<button id="start">Start Game</button>
+<button id="hit">Hit</button>
+<button id="stand">Stand</button>
 
-    <div id="dealer-hand" class="hand"></div>
-    <p>Score: <span id="dealer-score">0</span></p>
+<!-- sets the game container to help display a flexbox where the dealer card is above the
+    player cards and the player cards are side by side -->
+<div class="game-container">
+    <!-- dealer's container -->
+    <div class="dealer-section">
+        <h2>Dealer's Hand</h2>
+        <div id="dealer-hand" class="hand"></div>
+        <p>Score: <span id="dealer-score">0</span></p>
+    </div>
 
-    <h2>Player1 Hand</h2>
-    <div id="player1-hand" class="hand"></div>
-    <p>Score: <span id="player1-score">0</span></p>
-    <h2>Player 2 Hand</h2>
-    <div id="player2-hand" class="hand"></div>
-    <p>Score: <span id="player2-score">0</span></p>
-    <h2 id="message"></h2>
-    <script src="index.js"></script>
-    </body>
+    <!-- players' container -->
+    <div class="players-section">
+        <div class="player-section">
+            <h2>Player 1</h2>
+            <div id="player1-hand" class="hand"></div>
+            <p>Score: <span id="player1-score">0</span></p>
+        </div>
+
+        <div class="player-section">
+            <h2>Player 2</h2>
+            <div id="player2-hand" class="hand"></div>
+            <p>Score: <span id="player2-score">0</span></p>
+        </div>
+    </div>
+</div>
+
+<!-- simply displays the ending message informing players on status of games. this string
+    is fed from the javascript file -->
+<h2 id="message"></h2>
+
+<script src="index.js"></script>
+</body>
+
 </html>
